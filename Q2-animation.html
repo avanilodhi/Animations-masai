@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Animation</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgb(249, 129, 149), 0 0 20px 10px pink;
+    animation: expand 2s forwards, fadeOut 2s forwards;
+  }
+
+  @keyframes expand {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 100vw;
+      height: 80vw; /* Making the box square */
+      opacity: 1;
+    }
+  
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container"></div>
+</body>
+</html>
