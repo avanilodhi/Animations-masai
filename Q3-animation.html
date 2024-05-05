@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criss Cross Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .image1, .image2 {
+            position: absolute;
+            top: 50%;
+            animation: crisscross 6s linear infinite;
+        }
+
+        .image1 {
+            left: -100px;
+        }
+
+        .image2 {
+            right: -100px;
+        }
+
+        @keyframes crisscross {
+            0% {
+                transform: translateX(-100%);
+            }
+            25% {
+                transform: translateX(50%);
+            }
+            50% {
+                transform: translateX(50%);
+            }
+            75% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://banner2.cleanpng.com/20171220/kaq/tom-and-jerry-png-5a39fb59437dd9.39907605151374933727655431.jpg" alt="Image 1" class="image1">
+        <img src="https://i.pinimg.com/736x/c3/71/1d/c3711d9335c50b086fcd12c477e95381.jpg" alt="Image 2" class="image2">
+    </div>
+</body>
+</html>
